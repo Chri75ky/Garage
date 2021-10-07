@@ -25,7 +25,7 @@ public class GasCar extends Car {
         this.kmPrL = kmPrL;
     }
 
-    public double measureGreenOwnerCharge() {
+    public double measureGreenPropertyTax() {
         double sum = 0;
         if (kmPrL < 5) {
             sum = 10470;

@@ -55,7 +55,7 @@ public abstract class Car {
         this.amountOfDoors = amountOfDoors;
     }
 
-    public abstract double measureGreenOwnerCharge();
+    public abstract double measureGreenPropertyTax();
 
     @Override
     public String toString() {

@@ -3,23 +3,19 @@ import java.util.ArrayList;
 public class Garage {
     private ArrayList<Car> garage = new ArrayList<>();
 
-    public Garage() {
-
-    }
-
     public void addCarToGarage(Car car) {
         garage.add(car);
     }
 
-    public double measureTotalGreenOwnerCharge() {
+    public double measureTotalGreenPropertyTax() {
         double totalGreenCharge = 0;
         for (Car car : garage) {
             if (car instanceof GasCar) {
-                totalGreenCharge += ((GasCar) car).measureGreenOwnerCharge();
+                totalGreenCharge += ((GasCar) car).measureGreenPropertyTax();
             } else if (car instanceof ECar) {
-                totalGreenCharge += ((ECar) car).measureGreenOwnerCharge();
+                totalGreenCharge += ((ECar) car).measureGreenPropertyTax();
             } else {
-                totalGreenCharge += ((DieselCar) car).measureGreenOwnerCharge();
+                totalGreenCharge += ((DieselCar) car).measureGreenPropertyTax();
             }
         }
         return totalGreenCharge;

@@ -34,7 +34,7 @@ public class ECar extends Car {
         this.whPrKm = whPrKm;
     }
 
-    public double measureGreenOwnerCharge() {
+    public double measureGreenPropertyTax() {
         double whPrKmDivided = whPrKm / 91.25;
         double whPrKmToKmPrL = 100 / whPrKmDivided;
         double sum = 0;

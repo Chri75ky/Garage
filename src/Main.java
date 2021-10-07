@@ -11,7 +11,7 @@ public class Main {
         garage.addCarToGarage(eCar);
         garage.addCarToGarage(gasCar);
         System.out.println(garage.toString());
-        System.out.println("Den samlede afgift for bilparken er: " + garage.measureTotalGreenOwnerCharge() + " Kr.");
+        System.out.println("Den samlede afgift for bilparken er: " + garage.measureTotalGreenPropertyTax() + " Kr.");
 
 
     }
