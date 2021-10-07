@@ -27,20 +27,20 @@ public class DieselCar extends Car {
     public double measureGreenPropertyTax() {
         double sum = 0;
         if (kmPrL < 5) {
-            sum = 10470 + measureUdligningsAfgift() + measureParticleCharge();
+            sum = 10470 + measureUdligningsTax() + measureParticleFilterTax();
         } else if (kmPrL > 5 && kmPrL <= 10) {
-            sum = 5500 + measureUdligningsAfgift() + measureParticleCharge();
+            sum = 5500 + measureUdligningsTax() + measureParticleFilterTax();
         } else if (kmPrL > 10 && kmPrL <= 15) {
-            sum = 2340 + measureUdligningsAfgift() + measureParticleCharge();
+            sum = 2340 + measureUdligningsTax() + measureParticleFilterTax();
         } else if (kmPrL > 15 && kmPrL < 20) {
-            sum = 1050 + measureUdligningsAfgift() + measureParticleCharge();
+            sum = 1050 + measureUdligningsTax() + measureParticleFilterTax();
         } else if (kmPrL > 20 && kmPrL < 50) {
-            sum = 330 + measureUdligningsAfgift() + measureParticleCharge();
+            sum = 330 + measureUdligningsTax() + measureParticleFilterTax();
         }
         return sum;
     }
 
-    public double measureUdligningsAfgift() {
+    public double measureUdligningsTax() {
         double sumOfUdligning = 0;
         if (kmPrL < 5) {
             sumOfUdligning = 15260;
@@ -56,7 +56,7 @@ public class DieselCar extends Car {
         return sumOfUdligning;
     }
 
-    public int measureParticleCharge() {
+    public int measureParticleFilterTax() {
         if (hasParticleFilter) {
             return 0;
         } else {
